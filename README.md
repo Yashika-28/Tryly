@@ -54,15 +54,52 @@ The platform follows a multi-layer modular architecture:
 ```
 Tryly/
 │
-├── AI_models/              # Machine learning and AI modules
-├── public/                 # Static assets
-├── src/                    # React application source code
-├── index.html              # Entry HTML file
-├── package.json            # Project dependencies and scripts
-├── vite.config.js          # Vite configuration
-├── tailwind.config.js      # Tailwind CSS configuration
-├── eslint.config.js        # Linting rules
-└── README.md               # Project documentation
+├── AI_models/                     # Contains AI and machine learning modules
+│   ├── model_training/            # Scripts used to train ML models
+│   ├── inference/                 # Model prediction and processing scripts
+│   ├── preprocessing/             # Image/data preprocessing utilities
+│   └── utils/                     # Helper functions for AI processing
+│
+├── public/                        # Static public assets
+│   ├── images/                    # UI and application images
+│   ├── icons/                     # Application icons and graphics
+│   └── assets/                    # Other static resources
+│
+├── src/                           # Main React application source code
+│   ├── components/                # Reusable UI components
+│   │   ├── Navbar.jsx             # Navigation bar
+│   │   ├── Footer.jsx             # Footer section
+│   │   ├── TryOnPanel.jsx         # Virtual try-on interface
+│   │   └── RecommendationCard.jsx # Displays outfit recommendations
+│   │
+│   ├── pages/                     # Application page-level components
+│   │   ├── Home.jsx               # Landing page
+│   │   ├── TryOn.jsx              # Virtual try-on page
+│   │   ├── Recommendations.jsx    # Styling recommendation page
+│   │   └── About.jsx              # Project information page
+│   │
+│   ├── services/                  # API communication and backend interaction
+│   │   ├── aiService.js           # Connects frontend to AI modules
+│   │   └── apiService.js          # Handles HTTP/API requests
+│   │
+│   ├── hooks/                     # Custom React hooks
+│   │   └── useTryOn.js            # Try-on related logic
+│   │
+│   ├── styles/                    # Styling and Tailwind customizations
+│   │   └── global.css             # Global application styles
+│   │
+│   ├── App.jsx                    # Root React component
+│   ├── main.jsx                   # React application entry point
+│   └── routes.jsx                 # Routing configuration
+│
+├── index.html                     # Main HTML template
+├── package.json                   # Project dependencies and scripts
+├── package-lock.json              # Dependency version lock
+├── vite.config.js                 # Vite bundler configuration
+├── tailwind.config.js             # Tailwind CSS customization
+├── eslint.config.js               # Linting rules and code standards
+└── README.md                      # Project documentation
+
 ```
 
 ---
